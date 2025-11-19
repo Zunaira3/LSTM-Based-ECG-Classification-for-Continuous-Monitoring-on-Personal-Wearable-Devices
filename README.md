@@ -79,6 +79,11 @@ Designed for real-time inference on FPGA-based wearables.
 - Edge-AI health monitoring devices  
 
 ---
+MATLAB scripts: run matlab/segmentation.m on your ECG data to produce segments, then matlab/dwt_wavelet.m per segment to get wavelet features. Save processed features into matlab/train_data.mat for lstm_training.m.
+
+Verilog modules provided are skeletons: high/low-pass filters, downsample/upsample, and reconstruct filters need real coefficients and accurate sample-rate logic (these depend on your hardware design).
+
+HLS code is a template using the pragmas from your report — tune m, m2, memory access patterns, and types for your target platform (Vivado HLS / Intel HLS).
 
 ## ✨ Author
 **Zunaira Khalid**  
